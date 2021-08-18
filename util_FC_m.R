@@ -207,6 +207,31 @@ mix_est_f <- function(geno){
   return(ret)
 }
 
+get_select_res <- function(geno,res1,res2){
+ 
+  nts <- rep(0,25)
+  nt <- table(geno)
+  nts[as.numeric(names(nt))] <- as.numeric(nt)
+   ALLP1 <- auto_DF10_m(res1)
+  ALLP2 <- auto_DF10(res2)
+  L1 <- nts*log(ALLP1)
+  L2 <- nts*log(ALLP2)
+  L1[which(is.nan(L1))] <- 0
+  L2[which(is.nan(L2))] <- 0
+  
+  L <- -2*(sum(L1)-sum(L2))
+  pv <- pchisq(L,5,lower.tail = F)
+
+  Bic1 <- log(length(geno))*3-2*sum(L1)
+  Bic2 <- log(length(geno))*8-2*sum(L2)
+  if(Bic1 < Bic2){
+    bicres <- 0
+  }
+  else{bicres <- 1}
+  ret <- c(LR=L,Pv=pv,Bic1=Bic1,Bic2=Bic2,Bicres=bicres)
+  
+  return(ret)
+}
 
 
 Power_cal_mf <- function(res,geno,ii=25){
