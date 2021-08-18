@@ -16,7 +16,7 @@ for(i in 1:1000){
 }
 colMeans(cret_H_100)
 apply(cret_H_100,2,sd)
-length(which(cret_H_100[,4]<0.05))/1000
+
 
 
 
@@ -30,7 +30,7 @@ for(i in 1:1000){
 }
 colMeans(cret_H_200)
 apply(cret_H_200,2,sd)
-length(which(cret_H_200[,4]<0.05))/1000
+
 
 
 
@@ -44,7 +44,7 @@ for(i in 1:1000){
 }
 colMeans(cret_H_400)
 apply(cret_H_400,2,sd)
-length(which(cret_H_400[,4]<0.05))/1000
+
 
 
 
@@ -67,12 +67,7 @@ for(i in 1:1000){
 }
 colMeans(cret_D_100)
 apply(cret_D_100,2,sd)
-length(which(allp_100[,1]<0.05))/1000
-length(which(allp_100[,2]<0.05))/1000
-length(which(allp_100[,3]<0.05))/1000
-length(which(allp_100[,4]<0.05))/1000
-length(which(allp_100[,5]<0.05))/1000
-length(which(allp_100[,6]<0.05))/1000
+
 
 
 
@@ -86,12 +81,6 @@ for(i in 1:1000){
 }
 colMeans(cret_D_200)
 apply(cret_D_200,2,sd)
-length(which(allp_200[,1]<0.05))/1000
-length(which(allp_200[,2]<0.05))/1000
-length(which(allp_200[,3]<0.05))/1000
-length(which(allp_200[,4]<0.05))/1000
-length(which(allp_200[,5]<0.05))/1000
-length(which(allp_200[,6]<0.05))/1000
 
 
 #D_400
@@ -104,13 +93,6 @@ for(i in 1:1000){
 }
 colMeans(cret_D_400)
 apply(cret_D_400,2,sd)
-length(which(allp_400[,1]<0.05))/1000
-length(which(allp_400[,2]<0.05))/1000
-length(which(allp_400[,3]<0.05))/1000
-length(which(allp_400[,4]<0.05))/1000
-length(which(allp_400[,5]<0.05))/1000
-
-length(which(allp_400[,6]<0.05))/1000
 
 
 
