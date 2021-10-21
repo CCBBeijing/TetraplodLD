@@ -1,6 +1,6 @@
 # A theoretical framework to model linkage disequilibria for allotetraploid populations
 
-
+#doi: 10.5281/zenodo.5587622
 # 1 Introduction 
 
 At present, the TetraplodLD package is used to linkage disequilibrium analysis in the nature population of allotetraploid. This guide gives some brief instructions on how to perform the tasks of linkage disequilibrium analysis by this package. The outline of this guide is as follows:
